@@ -1,0 +1,23 @@
+.button {
+    display: block;
+    padding: 16px 24px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 0.5;
+    border: 2px solid var(--color-primary-light);
+    border-radius: 24px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    @media screen and (min-width: $bp-desktop) {
+        font-size: 18px;
+        line-height: 1.17;
+        padding: 16px 32px;
+        border-radius: 32px;
+        ;
+
+    }
+}

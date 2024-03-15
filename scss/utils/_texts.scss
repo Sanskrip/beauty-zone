@@ -1,0 +1,20 @@
+.text-primary {
+    color: var(--color-primary-light);
+}
+
+.text-primary-white {
+    color: var(--color-primary-white);
+}
+
+.text-primary-dark {
+    color: var(--color-primary-dark);
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+    font-weight: 700;
+}

@@ -1,0 +1,119 @@
+.backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(1, 31, 74, 0.4);
+    padding: 20px 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 3;
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+.modal {
+    position: relative;
+    width: 320px;
+    height: 75%;
+    background-color: var(--color-primary-dark);
+    background-image: url(/images/modal-bachground.png);
+    border-radius: 24px;
+    padding: 50px 30px;
+    overflow-y: auto;
+
+    @media screen and (min-width: $bp-tablet) {
+        padding: 48px 56px;
+        border-radius: 32px;
+        margin: 0;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+        width: 723px;
+        height: 681px;
+        padding: 42px 144px;
+
+        border-radius: 48px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 310px;
+
+        &__field {
+            width: 100%;
+            margin-bottom: 8px;
+
+            @media screen and (min-width: $bp-tablet) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: 16px;
+        text-align: center;
+        color: var(--color-primary-white);
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 64px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__descr {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.18;
+        margin-bottom: 12px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 22px;
+            margin-bottom: 32px;
+        }
+    }
+
+
+    &__button {
+        margin: 0 auto 8px;
+
+        &:hover {
+            background-color: var(--color-background);
+            color: var(--color-primary-dark);
+        }
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        width: 32px;
+        height: 32px;
+        fill: var(--color-primary-white);
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        @media screen and (min-width: $bp-tablet) {
+            top: 40px;
+            right: 40px;
+        }
+
+        &:hover {
+            fill: var(--color-secondary-light);
+        }
+    }
+
+}
